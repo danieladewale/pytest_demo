@@ -54,17 +54,17 @@ class TestBoggleSolver(unittest.TestCase):
         grid = [["A", "B", "C"],
                 ["D", "E", "F"],
                 ["G", "H", "I"]]
-        dictionary = ["aci", "adg", "bfi", "agi", "cfg"]  # Non-adjacent paths
+        dictionary = ["aci", "agi", "cag", "afh", "iah"]  # Non-adjacent paths
 
         boggle = Boggle(grid, dictionary)
         result = boggle.getSolution()
 
         # These words require non-adjacent jumps, should NOT be found
-        self.assertNotIn("aci", result)  # A to C to I - not adjacent
-        self.assertNotIn("adg", result)  # A to D to G - not all adjacent
-        self.assertNotIn("bfi", result)  # B to F to I - not adjacent
-        self.assertNotIn("agi", result)  # A to G - not adjacent
-        self.assertNotIn("cfg", result)  # C to F to G - not adjacent
+        self.assertNotIn("aci", result)  # A(0,0) to C(0,2) not adjacent
+        self.assertNotIn("agi", result)  # A(0,0) to G(2,0) not adjacent
+        self.assertNotIn("cag", result)  # C to A not adjacent
+        self.assertNotIn("afh", result)  # A to F not adjacent
+        self.assertNotIn("iah", result)  # I to A not adjacent
 
     # ========== EDGE CASES ==========
 
