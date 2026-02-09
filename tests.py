@@ -16,7 +16,7 @@ class TestSuite_Alg_Scalability_Cases(unittest.TestCase):
     solution = [x.upper() for x in solution]
     expected = ["abc", "abdhi", "cfi", "dea"];
     expected = [x.upper() for x in expected]
-		solution = sorted(solution)
+    solution = sorted(solution)
     expected = sorted(expected)
     self.assertEqual(expected, solution)
 
@@ -29,7 +29,7 @@ class TestSuite_Simple_Edge_Cases(unittest.TestCase):
     solution = mygame.getSolution()
     solution = [x.upper() for x in solution]
     expected = []
-		solution = sorted(solution)
+    solution = sorted(solution)
     expected = sorted(expected)
     self.assertEqual(expected, solution)
 
@@ -40,7 +40,7 @@ class TestSuite_Simple_Edge_Cases(unittest.TestCase):
     solution = mygame.getSolution()
     solution = [x.upper() for x in solution]
     expected = []
-		solution = sorted(solution)
+    solution = sorted(solution)
     expected = sorted(expected)
     self.assertEqual(expected, solution)
 
@@ -55,5 +55,5 @@ class TestSuite_Qu_and_St(unittest.TestCase):
     self.assertEqual(True, True)
 
 if __name__ == '__main__':
-	unittest.main()
+    unittest.main()
 
