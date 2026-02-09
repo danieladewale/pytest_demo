@@ -1,4 +1,3 @@
-# Daniel Adewale @03127159
 def read_words_from_file(filename):
     """
     Opens a file and reads the contents as a list of words.
